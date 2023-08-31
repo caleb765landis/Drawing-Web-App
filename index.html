@@ -1,0 +1,103 @@
+<!doctype html>
+
+<!--
+ TITLE: index.html
+ AUTHOR: Caleb Landis (CL)
+ CREATE DATE: 9/28/2022
+ PURPOSE: 2D Graphic Demo
+ LAST MODIFIED ON: 9/28/2022
+ LAST MODIFIED BY: Caleb Landis (CL)
+ Modification History:
+ 28 September 2022: Original Build (CL)
+-->
+
+<html lang="en">
+<head>
+
+	<meta charset="utf-8">
+
+	<!-- This <title> displays in the page tab -->
+	<title>2D Graphic Demo</title>
+
+	<!-- This will link to CSS stylesheet for formatting. -->
+  	<link rel="stylesheet" href="graphics.css">
+
+  	<!-- CSS to define jquery theme colors -->
+  	<link href="theme/jquery-ui.css" rel="stylesheet">
+</head>
+
+<body onload="init()">
+	<canvas id="canvas" height="600" width="900">
+	<p>Canvas not supported.</p>
+	</canvas>
+
+	<h2>Paints</h2>
+
+	<div id="paints" class="optionGroup">
+		<label for="color"  style="font-size: 25px; padding: 0 5px; display: inline-flex">Color</label>
+		<input type="color" id="color" name="color" value="#e2a347">
+
+		<label for="backgroundColor"  style="font-size: 25px; padding: 0 5px 0 30px; display: inline-flex">Background Color</label>
+		<input type="color" id="backgroundColor" name="backgroundColor" value="#404E4F">
+
+		<label for="textColor"  style="font-size: 25px; padding: 0 5px 0 30px; display: inline-flex">Text Color</label>
+		<input type="color" id="textColor" name="textColor" value="#000000">
+	</div>
+
+	<h2>Tools</h2>
+
+	<div id="toolbar" class="optionGroup" style="align-items: center; justify-content: center;">
+
+		<div class="ui-controlgroup-label" style="font-size: 25px; display: inline-flex">Size</div>
+
+		<div class="spaced" style="display: inline-flex">
+			<input id="size" class="ui-spinner-input" value="20" style="width: 40px"></input>
+
+			<!-- tool selection -->
+			<div id="radioset" style="padding: 0 10px">
+				<input type="radio" id="penBtn" name="radio" value="pen" checked></input>
+				<label for="penBtn">Pen</label>
+
+				<input type="radio" id="lineBtn" name="radio" value="line"></input>
+				<label for="lineBtn">Line</label>
+
+				<input type="radio" id="rectBtn" name="radio" value="rectangle"></input>
+				<label for="rectBtn">Rectangle</label>
+
+				<input type="radio" id="circleBtn" name="radio" value="circle"></input>
+				<label for="circleBtn">Circle</label>
+
+				<input type="radio" id="textBtn" name="radio" value="text"></input>
+				<label for="textBtn">Text</label>
+			</div>
+
+			<div><button id="imageBtn">Image</button></div>
+		</div>
+	</div>
+
+	<h2>Text Options</h2>
+
+	<div id="textOptions" class="optionGroup" style="align-items: center; justify-content: center; display: inline-flex">
+		<div class="ui-controlgroup-label spaced" style="font-size: 25px; display: inline-flex">Text Size</div>
+
+		<div class="spaced">
+			<input id="textSize" class="ui-spinner-input" value="20" style="width: 40px"></input>
+		</div>
+
+		<div>
+			<label for="textInput" style="font-size: 25px; display: inline-flex; padding: 0 5px 0 30px">Your Text: </label>
+			<input type="text" id="textInput" name="textInput" value="Text" style="font-size: 20px; display: inline-flex"></input>
+		</div>
+
+	</div>
+
+	<br><br>
+
+	<div><button id="clear">Clear</button></div>
+
+	<!-- all scripts -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> <!-- jQuery library -->
+	<script src="theme/jquery-ui.js"></script> <!-- jQuery UI library functionality -->
+	<script src="graphics.js"></script> <!-- this page's js -->
+</body>
+</html>

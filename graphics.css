@@ -1,0 +1,42 @@
+/**************************************
+ TITLE: graphics.css
+ AUTHOR: Caleb Landis (CL)
+ CREATE DATE: 9/28/2022
+ PURPOSE: Provide colors and dimensions for index.html 2D graphic demo
+ LAST MODIFIED ON: 9/28/2022
+ LAST MODIFIED BY: Caleb Landis (CL)
+ Modification History:
+ 28 September 2022: Original Build (CL)
+ ***************************************/
+
+body {
+  background-color: #FEF085; /* Yellow Crayola */
+}
+
+#cavnas {
+  background-color: white;
+  position: absolute;
+  left: 100px;
+  top: 100px;
+}
+
+.optionGroup {
+  background-color: white;
+  width: 880px;
+  border-radius: 10px;
+  padding: 10px;
+  text-align: center;
+}
+
+.spaced {
+  padding: 0 5px;
+}
+
+#output {
+  background-color: white;
+  padding: 0 20px;
+}
+
+.hidden{
+  display: none;
+}
